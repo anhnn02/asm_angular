@@ -43,6 +43,7 @@ import { ContactComponent } from './components/client/contact/contact.component'
 import { FormContactComponent } from './components/client/form-contact/form-contact.component';
 import { ProjectDetailComponent } from './pages/client/project-detail/project-detail.component';
 import { ConceptDetailComponent } from './pages/client/concept-detail/concept-detail.component';
+import { CategoryComponent } from './pages/admin/category/category/category.component';
 
 registerLocaleData(en);
 
@@ -78,6 +79,7 @@ registerLocaleData(en);
     FormContactComponent,
     ProjectDetailComponent,
     ConceptDetailComponent,
+    CategoryComponent,
   ],
   imports: [
     BrowserModule,

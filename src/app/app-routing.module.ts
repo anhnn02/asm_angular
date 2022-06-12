@@ -4,7 +4,9 @@ import { DashboardComponent } from './pages/admin/dashboard/dashboard.component'
 import { AddProductComponent } from './pages/admin/product/add-product/add-product.component';
 import { ListProductComponent } from './pages/admin/product/list-product/list-product.component';
 import { SignInComponent } from './pages/auth/sign-in/sign-in.component';
+import { ConceptDetailComponent } from './pages/client/concept-detail/concept-detail.component';
 import { HomePageComponent } from './pages/client/home-page/home-page.component';
+import { ProjectDetailComponent } from './pages/client/project-detail/project-detail.component';
 import { AdminLayoutComponent } from './pages/layouts/admin-layout/admin-layout.component';
 import { AuthLayoutComponent } from './pages/layouts/auth-layout/auth-layout.component';
 import { WebsiteLayoutComponent } from './pages/layouts/website-layout/website-layout.component';
@@ -16,7 +18,8 @@ const routes: Routes = [
     path: '', component: WebsiteLayoutComponent,
     children: [
       { path: '', component: HomePageComponent },
-      { path: 'project/:id', component: AddProductComponent },
+      { path: 'project/:id', component: ProjectDetailComponent },
+      { path: 'concept/:id', component: ConceptDetailComponent },
     ]
   },
   {

@@ -17,23 +17,40 @@
                 <th>#</th>
                 <th>Name</th>
                 <th>Img</th>
-                <th>Link</th>
                 <th>Tech</th>
-                <th>Tech sheet</th>
+                <th>Desc</th>
                 <th>Link demo</th>
+                <th colspan="2">Action</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let data of basicTable.data">
                 <td>{{ data.id }}</td>
-                <td>{{ data.name }}</td>
-                <td>
+                <td class="tw-w-44">{{ data.name }}</td>
+                <td class="tw-w-28">
                     <img class="tw-w-20 tw-h-20 tw-object-cover tw-rounded" src={{data.img}} alt="">
                 </td>
-                <td><a routerLink="{{ data.link }}"><i class="bi bi-link-45deg tw-text-primary-ann !tw-text-2xl"></i></a></td>
-                <td>{{ data.img }}</td>
-                <td>{{ data.img }}</td>
-                
+                <td>
+                    <img *ngFor="let techImg of splitArray(data.tech)"
+                        class="tw-inline tw-w-8 tw-h-8 tw-object-cover tw-rounded-full" [src]="techImg" alt="">
+                </td>
+                <td>
+                    <p class="tw-w-56 !tw-block tw-truncate">{{ data.desc }}</p>
+                </td>
+                <td class="tw-w-28 tw-text-center">
+                    <a class="hover:tw-text-blue-700"
+                        routerLink="{{ data.link }}">
+                        <i class="bi bi-link-45deg !tw-text-blue-500 !tw-text-2xl"></i>
+                    </a>
+                </td>
+                <td class="tw-w-5">
+                    <button class="tw-text-red-500 hover:tw-text-red-700"><i
+                            class="bi bi-trash-fill !tw-text-red-500 !tw-text-xl"></i></button>
+                </td>
+                <td class="tw-w-5">
+                    <button class="tw-text-yellow-500 hover:tw-yellow-red-700"><a routerLink=""><i
+                                class="bi bi-pencil-square !tw-text-yellow-500 !tw-text-xl"></i></a></button>
+                </td>
             </tr>
         </tbody>
     </nz-table>

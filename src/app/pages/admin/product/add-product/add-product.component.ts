@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { IProduct } from 'src/app/models/Product';
+import { IProject } from 'src/app/models/Product';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./add-product.component.css']
 })
 export class AddProductComponent implements OnInit {
-  project: IProduct = {
+  project: IProject = {
     name: "",
     desc: "",
     img: "",

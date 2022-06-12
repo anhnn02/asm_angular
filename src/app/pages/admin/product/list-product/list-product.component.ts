@@ -1,13 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { ColumnItem, IProduct } from 'src/app/models/Product';
+import { ColumnItem, IProject } from 'src/app/models/Product';
 import { ProductService } from '../../../../services/product.service';
+import { splitArray } from '../../../../../utils/splitTechImg';
+
 @Component({
   selector: 'app-list-product',
   templateUrl: './list-product.component.html',
   styleUrls: ['./list-product.component.css']
 })
 export class ListProductComponent implements OnInit {
-  projects!: IProduct[];
+  projects!: IProject[];
   constructor(private projectService: ProductService) {
     this.getAllProduct()
   }
@@ -17,6 +19,16 @@ export class ListProductComponent implements OnInit {
 
   getAllProduct() {
     this.projectService.getProjectList().subscribe(data => {
+      //convert to get item in each tech
+      // const newTech = data.map(item => {
+      //   return splitArray(item.tech)
+      // })
+      // const newTech2 = newTech[0]
+      // const newData = data.map(item => {
+      //   return {newTech2, ...item}
+      // })
+
+      // this.projects = newData
       this.projects = data
     })
   }
@@ -28,6 +40,11 @@ export class ListProductComponent implements OnInit {
         this.projects = this.projects.filter(item => item.id !== id);
       })
     }
+  }
+
+
+  splitArray = (arr: string) => {
+    return arr.split(", ")
   }
 
 }

@@ -2,160 +2,96 @@
   "projects": [
     {
       "id": 1,
-      "name": "json-server",
-      "img": "https://picsum.photos/200",
-      "link": "https://picsum.photos/200",
-      "tech": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200",
-      "techSheet": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200",
-      "descShort": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200",
-      "desc": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200"
+      "name": "Lorem ipsum dolor sit amett sit amet 1",
+      "img": "https://kingmarketing.vn/wp-content/uploads/2022/07/dich-vu-thiet-ke-website-03.png",
+      "link": "https://anhnn02-asm.vercel.app/",
+      "tech": "https://www.techtranz.com/wp-content/uploads/2018/05/1000px-React-icon.svg.png, https://www.techtranz.com/wp-content/uploads/2018/05/1000px-React-icon.svg.png, https://www.techtranz.com/wp-content/uploads/2018/05/1000px-React-icon.svg.png",
+      "techSheet": "techSheet, techSheet, techSheet",
+      "descShort": "descShort , descShort , descShort ",
+      "desc": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
+      "categoryId": 1
     },
     {
       "id": 2,
-      "name": "json-server",
-      "img": "https://picsum.photos/200",
-      "link": "https://picsum.photos/200",
-      "tech": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200",
-      "techSheet": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200",
-      "descShort": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200",
-      "desc": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200"
+      "name": "Lorem ipsum dolor sit amet amet 2",
+      "img": "https://kingmarketing.vn/wp-content/uploads/2022/07/dich-vu-thiet-ke-website-03.png",
+      "link": "https://anhnn02-asm.vercel.app/",
+      "tech": "https://www.techtranz.com/wp-content/uploads/2018/05/1000px-React-icon.svg.png, https://www.techtranz.com/wp-content/uploads/2018/05/1000px-React-icon.svg.png, https://www.techtranz.com/wp-content/uploads/2018/05/1000px-React-icon.svg.png",
+      "techSheet": "techSheet, techSheet, techSheet",
+      "descShort": "descShort , descShort , descShort ",
+      "desc": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
+      "categoryId": 1
     },
     {
       "id": 3,
-      "name": "json-server",
-      "img": "https://picsum.photos/200",
-      "link": "https://picsum.photos/200",
-      "tech": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200",
-      "techSheet": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200",
-      "descShort": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200",
-      "desc": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200"
+      "name": "Lorem ipsum dolor sit amet amet 3",
+      "img": "https://kingmarketing.vn/wp-content/uploads/2022/07/dich-vu-thiet-ke-website-03.png",
+      "link": "https://anhnn02-asm.vercel.app/",
+      "tech": "https://www.techtranz.com/wp-content/uploads/2018/05/1000px-React-icon.svg.png, https://www.techtranz.com/wp-content/uploads/2018/05/1000px-React-icon.svg.png, https://www.techtranz.com/wp-content/uploads/2018/05/1000px-React-icon.svg.png",
+      "techSheet": "techSheet, techSheet, techSheet",
+      "descShort": "descShort , descShort , descShort ",
+      "desc": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
+      "categoryId": 1
     },
     {
       "id": 4,
-      "name": "json-server",
-      "img": "https://picsum.photos/200",
-      "link": "https://picsum.photos/200",
-      "tech": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200",
-      "techSheet": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200",
-      "descShort": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200",
-      "desc": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200"
+      "name": "Lorem ipsum dolor sit amet amet 4",
+      "img": "https://kingmarketing.vn/wp-content/uploads/2022/07/dich-vu-thiet-ke-website-03.png",
+      "link": "https://anhnn02-asm.vercel.app/",
+      "tech": "https://www.techtranz.com/wp-content/uploads/2018/05/1000px-React-icon.svg.png, https://www.techtranz.com/wp-content/uploads/2018/05/1000px-React-icon.svg.png, https://www.techtranz.com/wp-content/uploads/2018/05/1000px-React-icon.svg.png",
+      "techSheet": "techSheet, techSheet, techSheet",
+      "descShort": "descShort , descShort , descShort ",
+      "desc": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
+      "categoryId": 1
     },
     {
       "id": 5,
-      "name": "json-server",
-      "img": "https://picsum.photos/200",
-      "link": "https://picsum.photos/200",
-      "tech": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200",
-      "techSheet": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200",
-      "descShort": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200",
-      "desc": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200"
-    },
-    {
-      "id": 6,
-      "name": "json-server",
-      "img": "https://picsum.photos/200",
-      "link": "https://picsum.photos/200",
-      "tech": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200",
-      "techSheet": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200",
-      "descShort": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200",
-      "desc": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200"
-    },
-    {
-      "id": 7,
-      "name": "json-server",
-      "img": "https://picsum.photos/200",
-      "link": "https://picsum.photos/200",
-      "tech": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200",
-      "techSheet": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200",
-      "descShort": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200",
-      "desc": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200"
-    },
-    {
-      "id": 8,
-      "name": "json-server",
-      "img": "https://picsum.photos/200",
-      "link": "https://picsum.photos/200",
-      "tech": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200",
-      "techSheet": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200",
-      "descShort": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200",
-      "desc": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200"
-    },
-    {
-      "id": 9,
-      "name": "json-server",
-      "img": "https://picsum.photos/200",
-      "link": "https://picsum.photos/200",
-      "tech": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200",
-      "techSheet": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200",
-      "descShort": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200",
-      "desc": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200"
-    },
-    {
-      "id": 10,
-      "name": "json-server",
-      "img": "https://picsum.photos/200",
-      "link": "https://picsum.photos/200",
-      "tech": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200",
-      "techSheet": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200",
-      "descShort": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200",
-      "desc": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200"
-    },
-    {
-      "id": 11,
-      "name": "json-server",
-      "img": "https://picsum.photos/200",
-      "link": "https://picsum.photos/200",
-      "tech": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200",
-      "techSheet": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200",
-      "descShort": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200",
-      "desc": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200"
-    },
-    {
-      "id": 111,
-      "name": "json-server",
-      "img": "https://picsum.photos/200",
-      "link": "https://picsum.photos/200",
-      "tech": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200",
-      "techSheet": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200",
-      "descShort": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200",
-      "desc": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200"
-    },
-    {
-      "id": 1111,
-      "name": "json-server",
-      "img": "https://picsum.photos/200",
-      "link": "https://picsum.photos/200",
-      "tech": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200",
-      "techSheet": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200",
-      "descShort": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200",
-      "desc": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200"
-    },
-    {
-      "id": 11111,
-      "name": "json-server",
-      "img": "https://picsum.photos/200",
-      "link": "https://picsum.photos/200",
-      "tech": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200",
-      "techSheet": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200",
-      "descShort": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200",
-      "desc": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200"
-    },
-    {
-      "id": 11111,
-      "name": "json-server",
-      "img": "https://picsum.photos/200",
-      "link": "https://picsum.photos/200",
-      "tech": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200",
-      "techSheet": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200",
-      "descShort": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200",
-      "desc": "https://picsum.photos/200, https://picsum.photos/200, https://picsum.photos/200"
+      "name": "Lorem ipsum dolor sit amet amet 5",
+      "img": "https://kingmarketing.vn/wp-content/uploads/2022/07/dich-vu-thiet-ke-website-03.png",
+      "link": "https://anhnn02-asm.vercel.app/",
+      "tech": "https://www.techtranz.com/wp-content/uploads/2018/05/1000px-React-icon.svg.png, https://www.techtranz.com/wp-content/uploads/2018/05/1000px-React-icon.svg.png, https://www.techtranz.com/wp-content/uploads/2018/05/1000px-React-icon.svg.png",
+      "techSheet": "techSheet, techSheet, techSheet",
+      "descShort": "descShort , descShort , descShort ",
+      "desc": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
+      "categoryId": 1
     }
   ],
   "concepts": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "name": "Lorem ipsum dolor sit amet amet",
+      "img": "https://kingmarketing.vn/wp-content/uploads/2022/07/dich-vu-thiet-ke-website-03.png",
+      "imgSub": "https://themes.getbootstrap.com/wp-content/uploads/2022/01/clever-admin-dashboard-template-badge-2x.jpg",
+      "link": "https://anhnn02-asm.vercel.app/",
+      "nameTech": "Figma",
+      "tech": "https://www.techtranz.com/wp-content/uploads/2018/05/1000px-React-icon.svg.png",
+      "descShort": "descShort , descShort , descShort ",
+      "desc": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
+      "categoryId": 2
+    },
+    {
+      "id": 2,
+      "name": "Lorem ipsum dolor sit amet amet",
+      "img": "https://kingmarketing.vn/wp-content/uploads/2022/07/dich-vu-thiet-ke-website-03.png",
+      "imgSub": "https://themes.getbootstrap.com/wp-content/uploads/2022/01/clever-admin-dashboard-template-badge-2x.jpg",
+      "link": "https://anhnn02-asm.vercel.app/",
+      "nameTech": "Figma",
+      "tech": "https://www.techtranz.com/wp-content/uploads/2018/05/1000px-React-icon.svg.png",
+      "descShort": "descShort , descShort , descShort ",
+      "desc": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
+      "categoryId": 2
+    },
+    {
+      "id": 3,
+      "name": "Lorem ipsum dolor sit amet amet",
+      "img": "https://kingmarketing.vn/wp-content/uploads/2022/07/dich-vu-thiet-ke-website-03.png",
+      "imgSub": "https://themes.getbootstrap.com/wp-content/uploads/2022/01/clever-admin-dashboard-template-badge-2x.jpg",
+      "link": "https://anhnn02-asm.vercel.app/",
+      "nameTech": "Figma",
+      "tech": "https://www.techtranz.com/wp-content/uploads/2018/05/1000px-React-icon.svg.png",
+      "descShort": "descShort , descShort , descShort ",
+      "desc": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
+      "categoryId": 2
     }
   ],
   "categories": [

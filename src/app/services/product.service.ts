@@ -1,34 +1,33 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { Observable } from 'rxjs';
-import { IProduct } from '../models/Product';
+import { IProject } from '../models/Product';
 @Injectable({
     providedIn: 'root'
 })
 export class ProductService {
     API_URL: string = 'http://localhost:3001/';
     API_PROJECT: string = `${this.API_URL}projects`;
-    API_CONCEPT: string = `${this.API_URL}concepts`;
     API_CATEGORY: string = `${this.API_URL}categories`;
     
     constructor(
         private http: HttpClient
     ) { }
 
-    getProject(id: string): Observable<IProduct> {
-        return this.http.get<IProduct>(`${this.API_PROJECT}/${id}`);
+    getProject(id: string | number): Observable<IProject> {
+        return this.http.get<IProject>(`${this.API_PROJECT}/${id}`);
     }
-    getProjectList(): Observable<IProduct[]> {
-        return this.http.get<IProduct[]>(this.API_PROJECT);
+    getProjectList(): Observable<IProject[]> {
+        return this.http.get<IProject[]>(this.API_PROJECT);
     }
-    removeProduct(id: string): Observable<IProduct[]> {
-        return this.http.delete<IProduct[]>(`${this.API_PROJECT}/${id}`);
+    removeProduct(id: string | number): Observable<IProject[]> {
+        return this.http.delete<IProject[]>(`${this.API_PROJECT}/${id}`);
     }
-    addProduct(product: IProduct): Observable<IProduct> {
-        return this.http.post<IProduct>(`${this.API_PROJECT}`, product)
+    addProduct(product: IProject): Observable<IProject> {
+        return this.http.post<IProject>(`${this.API_PROJECT}`, product)
     }
-    updateProduct(product: IProduct) {
-        return this.http.put<IProduct>(`${this.API_PROJECT}/${product.id}`, product);
+    updateProduct(product: IProject) {
+        return this.http.put<IProject>(`${this.API_PROJECT}/${product.id}`, product);
     }
 }
 

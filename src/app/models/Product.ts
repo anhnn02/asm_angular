@@ -1,21 +1,23 @@
 import { NzTableFilterFn, NzTableFilterList, NzTableSortFn, NzTableSortOrder } from 'ng-zorro-antd/table';
 
-export interface  IProduct{
+export interface  IProject{
     id?: number |string; 
     name: string; 
     img: string; 
     link: string; 
     tech: string; 
+    newTech2?: string | any; 
     techSheet: string;
     descShort: string;
     desc: string;
+    categoryId?: number;
 }
 export interface ColumnItem {
     name: string;
     sortOrder: NzTableSortOrder | null;
-    sortFn: NzTableSortFn<IProduct> | null;
+    sortFn: NzTableSortFn<IProject> | null;
     listOfFilter: NzTableFilterList;
-    filterFn: NzTableFilterFn<IProduct> | null;
+    filterFn: NzTableFilterFn<IProject> | null;
     filterMultiple: boolean;
     sortDirections: NzTableSortOrder[];
 }
