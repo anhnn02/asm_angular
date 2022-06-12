@@ -1,0 +1,27 @@
+.radius-primary {
+    @apply tw-rounded-lg
+}
+
+.radius-secondary {
+    border-radius: 5px;
+}
+
+.trans-second {
+    transition: 0.3s;
+}
+
+.form__item+.form__item {
+    margin: 5px 0 0;
+}
+
+.auth__input:focus+.auth__label {
+    top: 0;
+    padding: 0 1px;
+    display: inline-block;
+    background: white;
+    color: var(--primary-color);
+}
+
+.social__item+.social__item {
+    margin-left: 5px;
+}

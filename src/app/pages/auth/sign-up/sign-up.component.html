@@ -1,0 +1,82 @@
+<div class="relative w-[43%] min-w-[465px] max-w-[465px] mr-12">
+    <img src="https://cdn.dribbble.com/users/754899/screenshots/2985458/media/b8a16910e125ef377e7fb5941ef9082e.png?compress=1&resize=800x600&vertical=top"
+        alt="" class="w-full h-[550px] radius-secondary-ann object-cover" />
+    <a class="absolute top-3 left-3 bg-white rounded-lg opacity-50 px-2 py-3 trans-second hover:opacity-100 "
+        routerLink="/">
+        <img src="https://i.imgur.com/YR2XB5I.png" alt="" class="img-fluid w-28 object-cover" />
+    </a>
+</div>
+<div class="auth-content flex flex-col justify-center w-[350px]">
+    <h2 class="my-[1px] text-3xl font-bold">Get started</h2>
+    <span class="text-gray-darker">Already have an account?
+        <a routerLink="/signin" class="text-primary-color font-bold"> Sign In</a></span>
+    <form action="" class="mt-[20px] mb-[10px]" id="signUp" [formGroup]="validateForm" (ngSubmit)="submitForm()
+        ">
+        <div class="form__item input-container">
+            <div class="relative">
+                <nz-form-item>
+                    <nz-form-control nzErrorTip="Please input your username!">
+                        <input id="full-name" placeholder="Fullname"
+                            class="auth__input p-[10px] radius-primary w-[350px] border-[1.2px] border-solid border-gray-primary text-sm outline-none trans-second focus:border-primary-color"
+                            type="text" formControlName="name" />
+                    </nz-form-control>
+                </nz-form-item>
+
+            </div>
+            <div class="error-container pt-[2px] px-[6px] pb-0 text-xs min-h-[13px]">
+
+            </div>
+        </div>
+        <div class="form__item input-container">
+            <div class="relative">
+                <nz-form-item>
+                    <nz-form-control nzErrorTip="Please input your email!">
+                        <input id="email" placeholder="Email"
+                            class="auth__input p-[10px] radius-primary w-[350px] border-[1.2px] border-solid border-gray-primary text-sm outline-none trans-second focus:border-primary-color"
+                            type="email" formControlName="email" />
+                    </nz-form-control>
+                </nz-form-item>
+            </div>
+            <div class="error-container pt-[2px] px-[6px] pb-0 text-xs min-h-[13px]">
+                <span class="error-password"></span>
+            </div>
+        </div>
+        <div class="form__item input-container">
+            <div class="relative">
+                <nz-form-item>
+                    <nz-form-control nzErrorTip="Please input your password!">
+                        <input id="password" placeholder="Password"
+                            class="auth__input p-[10px] radius-primary w-[350px] border-[1.2px] border-solid border-gray-primary text-sm outline-none trans-second focus:border-primary-color"
+                            type="password" formControlName="password" />
+                    </nz-form-control>
+                </nz-form-item>
+            </div>
+            <div class="error-container pt-[2px] px-[6px] pb-0 text-xs min-h-[13px]">
+                <span class="error-password"></span>
+            </div>
+        </div>
+        <div class="form__item text-right">
+            <button type="submit"
+                class="auth__button border-none radius-primary bg-primary-color px-[10px] py-[10px] text-white trans-second block w-full mt-1 hover:opacity-90">Sign
+                Up</button>
+        </div>
+    </form>
+    <div class="auth-content__social">
+        <div class="flex justify-between items-center">
+            <span class="border-b border-solid border-gray-primary w-full"></span>
+            <span class="text-gray-darker block text-center w-full">Or sign up with</span>
+            <span class="border-b border-solid border-gray-primary w-full"></span>
+        </div>
+        <div class="social__content text-center mt-[10px]">
+            <a routerLink="#" class="social__item border border-solid color-gray-light py-2 px-[10px] radius-primary">
+                <i class="bi bi-google leading-snug text-red"></i>
+            </a>
+            <a routerLink="#" class="social__item border border-solid color-gray-light py-2 px-[10px] radius-primary">
+                <i class="bi bi-facebook leading-snug text-[#0466e4]"></i>
+            </a>
+            <a routerLink="#" class="social__item border border-solid color-gray-light py-2 px-[10px] radius-primary">
+                <i class="bi bi-twitter leading-snug text-[#009ef8]"></i>
+            </a>
+        </div>
+    </div>
+</div>

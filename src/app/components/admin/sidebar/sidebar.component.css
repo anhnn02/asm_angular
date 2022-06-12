@@ -1,0 +1,3 @@
+.admin-nav__link.active {
+    @apply tw-bg-purple-100
+}

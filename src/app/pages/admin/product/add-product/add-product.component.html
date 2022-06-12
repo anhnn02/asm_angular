@@ -1,0 +1,85 @@
+<div class="container tw-px-6 tw-mx-auto tw-grid">
+    <h2 class="tw-my-6 !tw-text-2xl tw-font-semibold tw-text-gray-700 :tw-text-gray-200">
+        Projects
+    </h2>
+    <h4 class="!tw-text-xl tw-font-semibold !tw-text-green-500 :tw-text-gray-200">Form {{nameForm}}</h4>
+    <div class="tw-grid tw-grid-cols-2 tw-gap-8">
+        <form (ngSubmit)="onSubmit()" #formAdd="ngForm">
+            <div class="tw-mb-4">
+                <label class="tw-block :tw-text-white tw-text-gray-700 tw-text-sm tw-font-bold tw-mb-2">
+                    Project name
+                </label>
+                <input
+                    class=" tw-appearance-none tw-border tw-rounded tw-w-full tw-py-2 tw-px-3 tw-text-gray-700 tw-leading-tight focus:tw-outline-none focus:-outline"
+                    id="title-project" [(ngModel)]="project.name" name="name" type="text" />
+            </div>
+            <div class="tw-grid tw-grid-cols-2 tw-gap-5">
+                <div class="tw-m-full">
+                    <label class="tw-block tw-text-gray-700 tw-text-sm tw-font-bold tw-mb-2">
+                        Image
+                    </label>
+                    <div class="tw-mb-3">
+                        <input [(ngModel)]="project.img" name="img"
+                            class="form-control tw-block tw-w-full tw-px-3 tw-py-1.5 tw-text-base tw-font-normal tw-text-gray-700 tw-bg-white tw-bg-clip-padding tw-border tw-border-solid tw-border-gray-300 tw-rounded tw-transition tw-ease-in-out tw-m-0 focus:tw-text-gray-700 focus:tw-bg-white focus:tw-border-blue-600 focus:tw-outline-none"
+                            type="text" id="img-project" />
+                    </div>
+                </div>
+                <div class="tw-m-full tw-mb-6">
+                    <label class="tw-block tw-text-gray-700 tw-text-sm tw-font-bold tw-mb-2">
+                        Category Name
+                    </label>
+                    <select
+                        class="selected-cate tw-form-select tw-appearance-none tw-block  tw-w-full  tw-px-3  py-[4px]  tw-text-base tw-font-normal tw-text-gray-700 tw-bg-white tw-bg-clip-padding tw-bg-no-repeat  tw-border tw-border-solid tw-border-gray-300 tw-rounded tw-transition tw-ease-in-out tw-m-0 focus:tw-text-gray-700 focus:tw-bg-white focus:tw-border-blue-600 focus:tw-outline-none"
+                        aria-label="Default select example">
+                        <option class="" value={item.id}>Abc</option>
+                    </select>
+                </div>
+            </div>
+            <div class="tw-grid tw-grid-cols-2 tw-gap-5">
+                <div class="tw-m-full tw-mb-4">
+                    <label class="tw-block tw-text-gray-700 tw-text-sm tw-font-bold tw-mb-2">
+                        Regular Price($)
+                    </label>
+                    <div class="tw-mb-3">
+                        <input [(ngModel)]="project.img" name="regularPrice"
+                            class=" tw-appearance-none tw-border tw-rounded tw-w-full tw-py-2 tw-px-3 tw-text-gray-700 tw-leading-tight focus:tw-outline-none focus:-outline"
+                            id="old-price-project" type="number" />
+                    </div>
+                </div>
+                <div class="tw-m-full">
+                    <label class="tw-block tw-text-gray-700 tw-text-sm tw-font-bold tw-mb-2">
+                        Sale Price($)
+                    </label>
+                    <div class="tw-mb-3">
+                        <input [(ngModel)]="project.link" name="salePrice"
+                            class=" tw-appearance-none tw-border tw-rounded tw-w-full tw-py-2 tw-px-3 tw-text-gray-700 tw-leading-tight focus:tw-outline-none focus:-outline"
+                            id="price-project" type="number" />
+                    </div>
+                </div>
+            </div>
+            <div class="tw-mb-4">
+                <label class="tw-block :tw-text-white tw-text-gray-700 tw-text-sm tw-font-bold tw-mb-2">
+                    Size
+                </label>
+                <input id="size" [(ngModel)]="project.tech" name="size"
+                    class="tw-appearance-none tw-border tw-rounded tw-w-full tw-py-2 tw-px-3 tw-text-gray-700 tw-leading-tight focus:tw-outline-none focus:-outline"
+                    type="text" />
+            </div>
+            <div class="tw-mb-4">
+                <label class="tw-block :tw-text-white tw-text-gray-700 tw-text-sm tw-font-bold tw-mb-2">
+                    Description
+                </label>
+                <textarea [(ngModel)]="project.desc" name="desc" class="tw-w-full" id="desc-project"></textarea>
+            </div>
+            <div class="tw-text-right">
+                <button
+                    class="btnAdd tw-bg-blue-500 hover:tw-bg-blue-700 !tw-text-white tw-font-bold tw-py-2 tw-px-4 tw-rounded focus:tw-outline-none focus:-outline">
+                    Submit
+                </button>
+            </div>
+        </form>
+        <div class="img">
+            <img id="img-preview" class="tw-w-full h-[420px] tw-object-cover" src="https://i.imgur.com/3XGhQ2Z.png" alt="" />
+        </div>
+    </div>
+</div>

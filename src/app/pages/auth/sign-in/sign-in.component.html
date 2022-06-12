@@ -1,0 +1,71 @@
+<div class="tw-px-24 tw-max-w-full tw-flex">
+    <div class="tw-relative tw-w-[43%] tw-min-w-[465px] tw-max-w-[465px] tw-mr-12">
+        <img src="https://i.pinimg.com/550x/57/14/e7/5714e7223450ca96a103af564ad04e94.jpg"
+            alt="" class="tw-w-full tw-h-[550px] radius-secondary tw-object-cover" />
+        <a class="tw-absolute tw-top-3 tw-left-3 tw-bg-white tw-rounded-lg tw-opacity-50 tw-px-3 tw-py-3 trans-second hover:tw-opacity-100 "
+            routerLink="/">
+            <app-logo></app-logo>
+        </a>
+    </div>
+    <div class="auth-content tw-flex tw-flex-col tw-justify-center tw-w-[350px]">
+        <h2 class="tw-my-[1px] tw-text-3xl tw-font-bold">Sign In</h2>
+        <span class="tw-text-gray-darker">Don’t have an account? <a routerLink="/register"
+                class="tw-text-primary-ann tw-font-bold"> Sign Up</a></span>
+        <form action="" id="formSignin" class="tw-mt-[20px] tw-mb-[10px]" [formGroup]="validateForm"
+            (ngSubmit)="submitForm()">
+            <div class="form__item input-container">
+                <div class="tw-relative">
+                    <nz-form-item>
+                        <nz-form-control nzErrorTip="Please input your email!">
+                            <input id="email" placeholder="Email"
+                                class="auth__input tw-p-[10px] radius-primary tw-w-[350px] tw-bg-slate-600 tw-text-sm tw-border-[1.2px] tw-border-solid tw-border-gray-primary-ann tw-outline-none trans-second focus:tw-border-primary-ann"
+                                type="email" formControlName="email" />
+                        </nz-form-control>
+                    </nz-form-item>
+                </div>
+                <div class="error-container tw-pt-[2px] tw-px-[6px] tw-pb-0 tw-text-xs tw-min-h-[13px]">
+
+                </div>
+            </div>
+            <div class="form__item input-container">
+                <div class="tw-relative">
+                    <nz-form-item>
+                        <nz-form-control nzErrorTip="Please input your password!">
+                            <input id="password" placeholder="Password"
+                                class="auth__input tw-p-[10px] radius-primary tw-w-[350px] tw-bg-slate-600 tw-text-sm tw-border-[1.2px] tw-border-solid tw-border-gray-primary tw-outline-none trans-second focus:tw-border-primary-ann"
+                                type="password" formControlName="password" />
+                        </nz-form-control>
+                    </nz-form-item>
+
+                </div>
+                <div class="error-container">
+                    <span class="error-password"></span>
+                </div>
+            </div>
+            <div class="form__item tw-text-right">
+                <a routerLink="/reset" class="tw-text-sm tw-text-gray-darker">Forgot password?</a>
+                <button type="submit"
+                    class="auth__button tw-border-none radius-primary tw-bg-primary-ann tw-px-[10px] tw-py-[10px] tw-text-white trans-second tw-block tw-w-full tw-mt-1 hover:tw-opacity-90">Sign
+                    In</button>
+            </div>
+        </form>
+        <div class="auth-content__social">
+            <div class="tw-flex tw-justify-between tw-items-center">
+                <span class="tw-border-b tw-border-solid tw-border-gray-primary-ann tw-w-full"></span>
+                <span class="text-gray-darker tw-block tw-text-center tw-w-full">Or sign in with</span>
+                <span class="tw-border-b tw-border-solid tw-border-gray-primary-ann tw-w-full"></span>
+            </div>
+            <div class="social__content tw-text-center tw-mt-[10px]">
+                <a routerLink="#"
+                    class="social__item tw-border tw-border-solid color-gray-light tw-py-2 tw-px-[10px] radius-primary">
+                    <i class="bi bi-google tw-leading-snug tw-text-red-500"></i></a>
+                <a routerLink="#"
+                    class="social__item tw-border tw-border-solid color-gray-light tw-py-2 tw-px-[10px] radius-primary">
+                    <i class="bi bi-facebook tw-leading-snug tw-text-[#0466e4]"></i></a>
+                <a routerLink="#"
+                    class="social__item tw-border tw-border-solid color-gray-light tw-py-2 tw-px-[10px] radius-primary">
+                    <i class="bi bi-twitter tw-leading-snug tw-text-[#009ef8]"></i></a>
+            </div>
+        </div>
+    </div>
+</div>

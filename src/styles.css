@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --primary: #3DB7D1;
+    --secondary: #0D1D31;
+    --primary-light: #ACDBE5;
+    --thirty: #FFB800;
+    --white: #fff;
+    --bgr: #0D1D31;
+
+    --primary-color: #FF6F16;
+    --secondary-color: #332C54;
+    --primary-15-color: rgba(248, 223, 209, 0.9);
+    --primary-50-color: rgba(255, 111, 22, 0.5);
+    --white: #fff;
+
+    --gray: #C4C4C4;
+    --gray-light: #F1F1F1;
+    --gray-lighter: #F0F0F4;
+    --gray-dark: #C1C1C1;
+    --gray-darker: #8B8B8B;
+
+    --bgr-color: #F8F8FA;
+    --sale-color: rgba(255, 0, 0, 0.15);
+    --new-item-color: rgba(34, 255, 0, 0.15);
+    --star-color: #FFE600;
+}
+
+* {
+    font-family: sans-serif;
+    font-size: 15px;
+    line-height: 1.4;
+    color: var(--white);
+}
+
+.admin-container * {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 15px;
+    line-height: 1.4;
+    color: black;
+}
+
+.admin-container html,
+.admin-container h1,
+.admin-container h2,
+.admin-container h3,
+.admin-container h4,
+.admin-container h5,
+.admin-container h6 .admin-container h6 .admin-container h6 {
+    color: black
+}
+
+html,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--white)
+}
+
+a {
+    color: var(--white)
+}
+
+a:hover {
+    color: var(--primary)
+}
+
+body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 300;
+}
+.img-fluid {
+    max-width: 100%;
+}
+
+.project-nav__item.active {
+    @apply tw-bg-primary-ann tw-p-2 tw-px-3 tw-rounded
+}
+
+.project-nav__item.active:hover {
+    @apply tw-text-white
+}
+
+.banner-icon:hover {
+    text-shadow: 0 2px 10px #fff;
+}
