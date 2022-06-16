@@ -1,17 +1,17 @@
 <div class="tw-space-y-3">
     <div class="">
-        <a routerLink="/#concept">
+        <a href="/#concept">
             <i class="bi bi-arrow-left-short tw-text-3xl"></i>
         </a>
     </div>
-    <h1 class="tw-font-bold tw-text-3xl md:tw-text-5xl">
+    <h1 class="tw-text-center tw-font-bold tw-text-3xl md:tw-text-5xl">
         {{concept.name}}
     </h1>
-    <div class="tw-space-x-3">
+    <div class="tw-text-center tw-space-x-3">
         <span class="tw-bg-primary-ann tw-py-1 tw-px-2 tw-rounded-3xl">2022</span>
-        <span class="tw-text-gray-400">{{concept.categoryId}}</span>
+        <span class="tw-text-gray-400">{{concept.cateConceptId}}</span>
     </div>
-    <p>{{concept.descShort}}</p>
+    <p class="tw-text-center">{{concept.descShort}}</p>
     <div class="tw-flex tw-justify-between tw-items-center">
         <a target="_blank" href={{concept.link}}
             class="tw-text-thirty tw-opacity-60 tw-duration-300 hover:tw-opacity-100">
@@ -32,9 +32,9 @@
     </div>
     <div class="tw-space-y-2">
         <h2 class="tw-inline-block tw-w-full md:tw-w-[40%] tw-text-3xl tw-border-b tw-pb-3">Technical Sheet</h2>
-        <span class="tw-block tw-text-2xl">{{concept.nameTech}}</span>
+        <span class="tw-block tw-text-xl">{{concept.nameTech}}</span>
         <div class="">
-            <img class="tw-w-full" src={{concept.imgSub}} alt="">
+            <img class="tw-w-full tw-rounded" src={{concept.imgSub}} alt="">
         </div>
     </div>
 </div>

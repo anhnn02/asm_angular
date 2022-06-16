@@ -1,0 +1,57 @@
+<div class="container tw-px-6 tw-grid tw-grid-cols-2">
+    <h2 class="tw-my-6 !tw-text-2xl tw-font-semibold tw-text-gray-700 :tw-text-gray-200">
+        Concepts
+    </h2>
+    <div class="tw-text-right">
+        <a routerLink="/admin/concept/add"
+            class="tw-my-6 tw-inline-block tw-bg-blue-500 !tw-text-white tw-py-2 tw-px-3 tw-rounded hover:tw-bg-blue-700 hover:tw-text-white  ">
+            <i class="bi bi-plus !tw-text-white"></i>
+            Add concept
+        </a>
+    </div>
+</div>
+<div style="height: 460; width: '100%' ; background: 'white'">
+    <nz-table #basicTable [nzData]="concepts">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Img</th>
+                <th>Img sub</th>
+                <th>Desc</th>
+                <th>Link demo</th>
+                <th colspan="2">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of basicTable.data">
+                <td>{{ data.id }}</td>
+                <td class="tw-w-44">{{ data.name }}</td>
+                <td class="tw-w-28">
+                    <img class="tw-w-20 tw-h-20 tw-object-cover tw-rounded" src={{data.img}} alt="">
+                </td>
+                <td>
+                    <img class="tw-inline tw-w-20 tw-h-20 tw-object-cover tw-rounded" [src]="data.imgSub" alt="">
+                </td>
+                <td>
+                    <p class="tw-w-56 !tw-block tw-truncate">{{ data.desc }}</p>
+                </td>
+                <td class="tw-w-28 tw-text-center">
+                    <a class="hover:tw-text-blue-700" href="{{ data.link }}" target="_blank">
+                        <i class="bi bi-link-45deg !tw-text-blue-500 !tw-text-2xl"></i>
+                    </a>
+                </td>
+                <td class="tw-w-5">
+                    <button class="tw-text-yellow-500 hover:tw-yellow-red-700">
+                        <a routerLink="/admin/concept/{{data.id}}/edit"><i
+                                class="bi bi-pencil-square !tw-text-yellow-500 !tw-text-xl"></i></a>
+                    </button>
+                </td>
+                <td class="tw-w-5">
+                    <button (click)="onHandleRemove(data.id!)" class="tw-text-red-500 hover:tw-text-red-700"><i
+                            class="bi bi-trash-fill !tw-text-red-500 !tw-text-xl"></i></button>
+                </td>
+            </tr>
+        </tbody>
+    </nz-table>
+</div>

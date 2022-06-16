@@ -23,10 +23,10 @@ export class ConceptService {
     removeConcept(id: string | number): Observable<IConcept[]> {
         return this.http.delete<IConcept[]>(`${this.API_CONCEPT}/${id}`);
     }
-    addConcept(product: IConcept): Observable<IConcept> {
-        return this.http.post<IConcept>(`${this.API_CONCEPT}`, product)
+    addConcept(concept: IConcept): Observable<IConcept> {
+        return this.http.post<IConcept>(`${this.API_CONCEPT}`, concept)
     }
-    updateProduct(product: IConcept) {
-        return this.http.put<IConcept>(`${this.API_CONCEPT}/${product.id}`, product);
+    updateConcept(concept: IConcept) {
+        return this.http.put<IConcept>(`${this.API_CONCEPT}/${concept.id}`, concept);
     }
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { IProject } from 'src/app/models/Product';
-import { ProductService } from 'src/app/services/product.service';
+import { ProjectService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-project-detail',
@@ -10,7 +10,9 @@ import { ProductService } from 'src/app/services/product.service';
 })
 export class ProjectDetailComponent implements OnInit {
   project!: IProject 
-  constructor(private productService: ProductService,
+  proRelated!: any
+  idCatePro!: number | string
+  constructor(private projectService: ProjectService,
     private router: Router,
     private route: ActivatedRoute) {
       this.getProject()
@@ -22,9 +24,22 @@ export class ProjectDetailComponent implements OnInit {
   getProject() {
     const id = this.route.snapshot.paramMap.get('id')!;
     if(id) {
-      this.productService.getProject(id).subscribe(data => {
+      this.projectService.getProject(id).subscribe(data => {
         this.project = data
+        this.idCatePro! = data.cateProjectId!
+        this.getAllRelatedPro(this.idCatePro)
       })
     }
+  }
+
+  getAllRelatedPro(idCatePro: string | number) {
+    this.projectService.getRelatedProject(idCatePro).subscribe(data => {
+      this.proRelated = data
+      console.log(data);
+
+    })
+  }
+  splitArray = (arr: string) => {
+    return arr.split(", ")
   }
 }

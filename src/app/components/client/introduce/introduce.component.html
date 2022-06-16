@@ -1,4 +1,4 @@
-<div class="tw-mt-24 tw-px-10">
+<div id="introduce" class="tw-mt-24 tw-px-10">
     <div class="tw-text-center tw-mb-10">
         <h2 class="tw-font-bold tw-text-2xl md:tw-text-3xl">Who am I?</h2>
         <span class="tw-inline-block tw-w-[350px] tw-text-primary-light-ann tw-pt-2 ">Lorem ipsum dolor sit amet,
@@ -8,21 +8,20 @@
         <div class="tw-text-center">
             <div class="tw-inline-block reg-blur tw-overflow-hidden tw-rounded-xl">
                 <img class="tw-inline-block tw-m-5 tw-mb-16 tw-overflow-hidden tw-rounded-lg tw-w-56 tw-h-60 tw-object-cover"
-                    src="https://i.pinimg.com/564x/95/3e/35/953e359466133adbfc8a08dfa712f6bc.jpg"
-                    alt="" />
+                    [src]="info?.img" alt="" />
             </div>
         </div>
         <div class="tw-flex tw-flex-col tw-justify-between">
-            <h4 class="tw-text-center md:tw-text-left tw-font-bold tw-text-xl">Lorem ipsum dolor</h4>
-            <p class="tw-text-justify tw-text-left tw-text-sm tw-my-1 md:tw-my-0 md:tw-text-[15px]">Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-            <p class="tw-text-justify tw-text-left tw-text-sm tw-my-1 md:tw-my-0 md:tw-text-[15px]">Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-                <button class="tw-rounded-lg tw-bg-primary-ann tw-border tw-border-primary-ann tw-p-3 tw-px-4 tw-m-auto md:tw-m-0 tw-w-fit"><a class="hover:tw-text-white" routerLink="#">Let's talk</a></button>
+            <h4 class="tw-text-center md:tw-text-left tw-font-bold tw-text-xl">{{info?.fullname}}</h4>
+            <p class="tw-text-justify tw-text-sm tw-my-1 md:tw-my-0 md:tw-text-[15px]">
+                {{info?.education}}
+            </p>
+            <p class="tw-text-justify tw-text-sm tw-my-1 md:tw-my-0 md:tw-text-[15px]">
+                {{info?.workExperience}}
+            </p>
+            <button
+                class="tw-rounded-lg tw-bg-primary-ann tw-border tw-border-primary-ann tw-p-3 tw-px-4 tw-m-auto md:tw-m-0 tw-w-fit"><a
+                    class="hover:tw-text-white" routerLink="#">Let's talk</a></button>
         </div>
     </div>
 </div>

@@ -1,3 +1,7 @@
 .admin-nav__link.active {
     @apply tw-bg-purple-100
 }
+.font-logo {
+    font-family: 'Pacifico';
+    text-shadow: 0px 0px 10px #3DB7D1;
+}

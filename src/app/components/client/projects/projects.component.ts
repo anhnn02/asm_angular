@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IProject } from 'src/app/models/Product';
-import { ProductService } from 'src/app/services/product.service';
+import { ProjectService } from 'src/app/services/product.service';
 import { splitArray } from 'src/utils/splitTechImg';
 
 @Component({
@@ -10,7 +10,7 @@ import { splitArray } from 'src/utils/splitTechImg';
 })
 export class ProjectsComponent implements OnInit {
   projects!: IProject[];
-  constructor(private projectService: ProductService) {
+  constructor(private projectService: ProjectService) {
     this.getAllProduct()
    }
 
@@ -28,6 +28,9 @@ export class ProjectsComponent implements OnInit {
 
       this.projects = newData
     })
+  }
+  splitArray = (arr: string) => {
+    return arr.split(", ")
   }
 
 }

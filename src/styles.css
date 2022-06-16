@@ -33,6 +33,7 @@
     font-size: 15px;
     line-height: 1.4;
     color: var(--white);
+    
 }
 
 .admin-container * {
@@ -52,6 +53,9 @@
     color: black
 }
 
+html{
+    scroll-behavior: smooth
+}
 html,
 h1,
 h2,
@@ -85,13 +89,16 @@ body {
 }
 
 .project-nav__item.active {
-    @apply tw-bg-primary-ann tw-p-2 tw-px-3 tw-rounded
+    @apply !tw-bg-primary-ann !tw-p-2 !tw-px-3 tw-rounded
 }
 
 .project-nav__item.active:hover {
-    @apply tw-text-white
+    @apply !tw-text-white
 }
 
 .banner-icon:hover {
     text-shadow: 0 2px 10px #fff;
+}
+.alert-danger{
+    color: red
 }

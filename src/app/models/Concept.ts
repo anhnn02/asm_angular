@@ -10,5 +10,5 @@ export interface IConcept {
     nameTech: string;
     descShort: string;
     desc: string;
-    categoryId?: number;
+    cateConceptId?: number;
 }

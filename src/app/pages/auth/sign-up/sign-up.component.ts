@@ -19,16 +19,16 @@ export class SignUpComponent implements OnInit {
   }
 
   submitForm(): void {
-    if (this.validateForm.valid) {
-      console.log('submit', this.validateForm.value);
-      this.authService.register(this.validateForm.value).subscribe()
-    } else {
-      Object.values(this.validateForm.controls).forEach(control => {
-        if (control.invalid) {
-          control.markAsDirty();
-          control.updateValueAndValidity({ onlySelf: true });
-        }
-      });
-    }
+    // if (this.validateForm.valid) {
+    //   console.log('submit', this.validateForm.value);
+    //   this.authService.register(this.validateForm.value).subscribe()
+    // } else {
+    //   Object.values(this.validateForm.controls).forEach(control => {
+    //     if (control.invalid) {
+    //       control.markAsDirty();
+    //       control.updateValueAndValidity({ onlySelf: true });
+    //     }
+    //   });
+    // }
   }
 }

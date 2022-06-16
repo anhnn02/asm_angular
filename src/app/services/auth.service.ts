@@ -12,11 +12,9 @@ export class AuthService {
     private http: HttpClient
   ) { }
 
-  register(infoUser: IUser): Observable<IUser> {
-    return this.http.post<IUser>(`http://localhost:3001/api/register`, infoUser);
-  }
+
   login(infoUser: IUser): Observable<IUser> {
-    return this.http.post<IUser>(`http://localhost:3001/api/login`, infoUser);
+    return this.http.post<IUser>(`http://localhost:3001/login`, infoUser);
   }
 
 

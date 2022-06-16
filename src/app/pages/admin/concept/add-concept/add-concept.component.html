@@ -1,0 +1,127 @@
+<div class="container tw-p-6 tw-pt-0 tw-mx-auto tw-grid">
+    <h2 class="tw-my-6 !tw-text-2xl tw-font-semibold tw-text-gray-700 :tw-text-gray-200">
+        Concepts
+    </h2>
+    <h4 class="!tw-text-xl tw-font-semibold !tw-text-green-500 :tw-text-gray-200">Form {{nameForm}}</h4>
+    <form (ngSubmit)="onSubmit()" #formAdd="ngForm">
+        <div class="tw-grid tw-grid-cols-2 tw-gap-8">
+            <div class="">
+                <div class="tw-mb-4">
+                    <label class="tw-block :tw-text-white tw-text-gray-700 tw-text-sm tw-font-bold tw-mb-2">
+                        Concept name <span class="!tw-text-red-500">*</span>
+                    </label>
+                    <input
+                        class=" tw-appearance-none tw-border tw-rounded tw-w-full tw-py-2 tw-px-3 tw-text-gray-700 tw-leading-tight focus:tw-outline-none focus:-outline"
+                        id="title-concept" [(ngModel)]="concept.name" name="name" type="text" #name="ngModel" required
+                        minlength="5" maxlength="60" />
+                    <div *ngIf="name.errors" class="alert">
+                        <div *ngIf="name.errors?.['required'] && (name.dirty || name.touched)" class="!tw-text-red-500">
+                            Name is required
+                        </div>
+                        <div *ngIf="name.errors?.['minlength'] && (name.dirty || name.touched)"
+                            class="!tw-text-red-500">
+                            Min length is 5
+                        </div>
+                        <div *ngIf="name.errors?.['maxlength'] && (name.dirty || name.touched)"
+                            class="!tw-text-red-500">
+                            Max length is 60
+                        </div>
+                    </div>
+                </div>
+                <div class="tw-m-full">
+                    <label class="tw-block tw-text-gray-700 tw-text-sm tw-font-bold tw-mb-2">
+                        Image avatar
+                    </label>
+                    <div class="tw-mb-3">
+                        <input [(ngModel)]="concept.img" name="img" #img="ngModel" required
+                            class="form-control tw-block tw-w-full tw-px-3 tw-py-1.5 tw-text-base tw-font-normal tw-text-gray-700 tw-bg-white tw-bg-clip-padding tw-border tw-border-solid tw-border-gray-300 tw-rounded tw-transition tw-ease-in-out tw-m-0 focus:tw-text-gray-700 focus:tw-bg-white focus:tw-border-blue-600 focus:tw-outline-none"
+                            type="text" id="img-concept" />
+                    </div>
+                    <div *ngIf="img.errors" class="alert">
+                        <div *ngIf="img.errors?.['required'] && (img.dirty || img.touched)" class="!tw-text-red-500">
+                            Img is required
+                        </div>
+                    </div>
+                </div>
+                <div class="tw-mb-4">
+                    <label class="tw-block :tw-text-white tw-text-gray-700 tw-text-sm tw-font-bold tw-mb-2">
+                        Img sub description
+                    </label>
+                    <input id="size" [(ngModel)]="concept.imgSub" name="link" #link="ngModel" required
+                        class="tw-appearance-none tw-border tw-rounded tw-w-full tw-py-2 tw-px-3 tw-text-gray-700 tw-leading-tight focus:tw-outline-none focus:-outline"
+                        type="text" />
+                    <div *ngIf="link.errors" class="alert">
+                        <div *ngIf="link.errors?.['required'] && (link.dirty || link.touched)" class="!tw-text-red-500">
+                            Link is required
+                        </div>
+                    </div>
+                </div>
+                <div class="tw-mb-4">
+                    <label class="tw-block :tw-text-white tw-text-gray-700 tw-text-sm tw-font-bold tw-mb-2">
+                        Link demo
+                    </label>
+                    <input id="size" [(ngModel)]="concept.link" name="link" #link="ngModel" required
+                        class="tw-appearance-none tw-border tw-rounded tw-w-full tw-py-2 tw-px-3 tw-text-gray-700 tw-leading-tight focus:tw-outline-none focus:-outline"
+                        type="text" />
+                    <div *ngIf="link.errors" class="alert">
+                        <div *ngIf="link.errors?.['required'] && (link.dirty || link.touched)" class="!tw-text-red-500">
+                            Link is required
+                        </div>
+                    </div>
+                </div>
+                <div class="tw-m-full">
+                    <label class="tw-block tw-text-gray-700 tw-text-sm tw-font-bold tw-mb-2">
+                        Name Tech <span class="!tw-text-red-500">*</span>
+                    </label>
+                    <div class="tw-mb-3">
+                        <input [(ngModel)]="concept.nameTech" name="nameTech" #nameTech="ngModel" required
+                            class="form-control tw-block tw-w-full tw-px-3 tw-py-1.5 tw-text-base tw-font-normal tw-text-gray-700 tw-bg-white tw-bg-clip-padding tw-border tw-border-solid tw-border-gray-300 tw-rounded tw-transition tw-ease-in-out tw-m-0 focus:tw-text-gray-700 focus:tw-bg-white focus:tw-border-blue-600 focus:tw-outline-none"
+                            type="text" id="img-concept" />
+                    </div>
+                    <div *ngIf="nameTech.errors" class="alert">
+                        <div *ngIf="nameTech.errors?.['required'] && (nameTech.dirty || nameTech.touched)"
+                            class="!tw-text-red-500">
+                            NameTech is required
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tw-text-center">
+                <img id="img-preview" class="tw-inline-block tw-w-[360px] tw-h-[360px] tw-object-cover"
+                    src={{concept.img}} onerror="this.src='https://i.imgur.com/MV2djzI.png'" alt="" />
+            </div>
+        </div>
+        <div class="tw-mb-4">
+            <label class="tw-block :tw-text-white tw-text-gray-700 tw-text-sm tw-font-bold tw-mb-2">
+                Short description <span class="!tw-text-red-500">*</span>
+            </label>
+            <textarea [(ngModel)]="concept.descShort" name="descShort" #descShort="ngModel" required
+                class="tw-w-full tw-h-[80px] tw-border tw-rounded" id="desc-concept"></textarea>
+            <div *ngIf="descShort.errors" class="alert">
+                <div *ngIf="descShort.errors?.['required'] && (descShort.dirty || descShort.touched)"
+                    class="!tw-text-red-500">
+                    DescShort is required
+                </div>
+            </div>
+        </div>
+        <div class="tw-mb-4">
+            <label class="tw-block :tw-text-white tw-text-gray-700 tw-text-sm tw-font-bold tw-mb-2">
+                Description <span class="!tw-text-red-500">*</span>
+            </label>
+            <textarea [(ngModel)]="concept.desc" name="desc" #desc="ngModel" required
+                class="tw-w-full tw-h-[80px] tw-border tw-rounded" id="desc-concept"></textarea>
+            <div *ngIf="desc.errors" class="alert">
+                <div *ngIf="desc.errors?.['required'] && (desc.dirty || desc.touched)" class="!tw-text-red-500">
+                    Desc is required
+                </div>
+            </div>
+        </div>
+        <div class="tw-text-right">
+            <button [disabled]="!formAdd.valid"
+                class="btnAdd tw-bg-blue-500 hover:tw-bg-blue-700 !tw-text-white tw-font-bold tw-py-2 tw-px-4 tw-rounded focus:tw-outline-none focus:-outline">
+                Submit
+            </button>
+        </div>
+    </form>
+
+</div>

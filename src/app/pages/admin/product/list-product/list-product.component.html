@@ -19,6 +19,7 @@
                 <th>Img</th>
                 <th>Tech</th>
                 <th>Desc</th>
+                <th>Category</th>
                 <th>Link demo</th>
                 <th colspan="2">Action</th>
             </tr>
@@ -37,19 +38,22 @@
                 <td>
                     <p class="tw-w-56 !tw-block tw-truncate">{{ data.desc }}</p>
                 </td>
+                <td>
+                    <p class=" !tw-block tw-truncate">{{ data.cateProject?.name }}</p>
+                </td>
                 <td class="tw-w-28 tw-text-center">
-                    <a class="hover:tw-text-blue-700"
-                        routerLink="{{ data.link }}">
+                    <a class="hover:tw-text-blue-700" href="{{ data.link }}" target="_blank">
                         <i class="bi bi-link-45deg !tw-text-blue-500 !tw-text-2xl"></i>
                     </a>
                 </td>
                 <td class="tw-w-5">
-                    <button class="tw-text-red-500 hover:tw-text-red-700"><i
-                            class="bi bi-trash-fill !tw-text-red-500 !tw-text-xl"></i></button>
+                    <button class="tw-text-yellow-500 hover:tw-yellow-red-700">
+                        <a routerLink="/admin/project/{{data.id}}/edit"><i class="bi bi-pencil-square !tw-text-yellow-500 !tw-text-xl"></i></a>
+                    </button>
                 </td>
                 <td class="tw-w-5">
-                    <button class="tw-text-yellow-500 hover:tw-yellow-red-700"><a routerLink=""><i
-                                class="bi bi-pencil-square !tw-text-yellow-500 !tw-text-xl"></i></a></button>
+                    <button (click)="onHandleRemove(data.id!)" class="tw-text-red-500 hover:tw-text-red-700"><i
+                            class="bi bi-trash-fill !tw-text-red-500 !tw-text-xl"></i></button>
                 </td>
             </tr>
         </tbody>

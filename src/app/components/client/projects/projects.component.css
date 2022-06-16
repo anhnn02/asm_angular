@@ -1,0 +1,7 @@
+.project-nav__item {
+    @apply  !tw-bg-primary-ann !tw-p-2 !tw-px-3 tw-rounded
+}
+
+.project-nav__item:hover {
+    @apply  !tw-text-white
+}

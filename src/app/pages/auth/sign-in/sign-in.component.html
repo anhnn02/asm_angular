@@ -16,16 +16,21 @@
             <div class="form__item input-container">
                 <div class="tw-relative">
                     <nz-form-item>
-                        <nz-form-control nzErrorTip="Please input your email!">
-                            <input id="email" placeholder="Email"
+                        <nz-form-control [nzErrorTip]="combineTpl" nzHasFeedback >
+                            <input id="email" placeholder="Email" nz-input minlength="6"
+                                    required 
                                 class="auth__input tw-p-[10px] radius-primary tw-w-[350px] tw-bg-slate-600 tw-text-sm tw-border-[1.2px] tw-border-solid tw-border-gray-primary-ann tw-outline-none trans-second focus:tw-border-primary-ann"
                                 type="email" formControlName="email" />
+                                <ng-template #combineTpl let-control>
+                                    <ng-container *ngIf="control.hasError('minlength')">MinLength is 6.</ng-container>
+                                    <ng-container *ngIf="control.hasError('required')">Input is required</ng-container>
+                                    <ng-container *ngIf="control.hasError('email')"> Gia tri phai la email</ng-container>
+                                </ng-template>
                         </nz-form-control>
                     </nz-form-item>
+                    
                 </div>
-                <div class="error-container tw-pt-[2px] tw-px-[6px] tw-pb-0 tw-text-xs tw-min-h-[13px]">
-
-                </div>
+                
             </div>
             <div class="form__item input-container">
                 <div class="tw-relative">
@@ -38,8 +43,8 @@
                     </nz-form-item>
 
                 </div>
-                <div class="error-container">
-                    <span class="error-password"></span>
+                <div *ngIf="error" class="error-container tw-pt-[2px] tw-px-[6px] tw-pb-0 tw-text-xs tw-min-h-[13px]">
+                    {{error}}
                 </div>
             </div>
             <div class="form__item tw-text-right">

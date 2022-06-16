@@ -5,7 +5,7 @@ import { IProject } from '../models/Product';
 @Injectable({
     providedIn: 'root'
 })
-export class ProductService {
+export class ProjectService {
     API_URL: string = 'http://localhost:3001/';
     API_PROJECT: string = `${this.API_URL}projects`;
     API_CATEGORY: string = `${this.API_URL}categories`;
@@ -15,19 +15,22 @@ export class ProductService {
     ) { }
 
     getProject(id: string | number): Observable<IProject> {
-        return this.http.get<IProject>(`${this.API_PROJECT}/${id}`);
+        return this.http.get<IProject>(`${this.API_PROJECT}/${id}?_expand=cateProject`);
     }
     getProjectList(): Observable<IProject[]> {
-        return this.http.get<IProject[]>(this.API_PROJECT);
+        return this.http.get<IProject[]>(`${this.API_PROJECT}?_expand=cateProject`);
     }
-    removeProduct(id: string | number): Observable<IProject[]> {
+    removeProject(id: string | number ): Observable<IProject[]> {
         return this.http.delete<IProject[]>(`${this.API_PROJECT}/${id}`);
     }
-    addProduct(product: IProject): Observable<IProject> {
-        return this.http.post<IProject>(`${this.API_PROJECT}`, product)
+    addProject(project: IProject): Observable<IProject> {
+        return this.http.post<IProject>(`${this.API_PROJECT}`, project)
     }
-    updateProduct(product: IProject) {
-        return this.http.put<IProject>(`${this.API_PROJECT}/${product.id}`, product);
+    updateProject(project: IProject) {
+        return this.http.put<IProject>(`${this.API_PROJECT}/${project.id}`, project);
+    }
+    getRelatedProject(id: string | number): Observable<IProject[]> {
+        return this.http.get<IProject[]>(`http://localhost:3001/cateProjects/${id}?_embed=projects`);
     }
 }
 

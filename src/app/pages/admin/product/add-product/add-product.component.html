@@ -1,85 +1,99 @@
-<div class="container tw-px-6 tw-mx-auto tw-grid">
+<div class="container tw-p-6 tw-pt-0 tw-mx-auto tw-grid">
     <h2 class="tw-my-6 !tw-text-2xl tw-font-semibold tw-text-gray-700 :tw-text-gray-200">
         Projects
     </h2>
     <h4 class="!tw-text-xl tw-font-semibold !tw-text-green-500 :tw-text-gray-200">Form {{nameForm}}</h4>
-    <div class="tw-grid tw-grid-cols-2 tw-gap-8">
-        <form (ngSubmit)="onSubmit()" #formAdd="ngForm">
-            <div class="tw-mb-4">
-                <label class="tw-block :tw-text-white tw-text-gray-700 tw-text-sm tw-font-bold tw-mb-2">
-                    Project name
-                </label>
-                <input
-                    class=" tw-appearance-none tw-border tw-rounded tw-w-full tw-py-2 tw-px-3 tw-text-gray-700 tw-leading-tight focus:tw-outline-none focus:-outline"
-                    id="title-project" [(ngModel)]="project.name" name="name" type="text" />
-            </div>
-            <div class="tw-grid tw-grid-cols-2 tw-gap-5">
-                <div class="tw-m-full">
-                    <label class="tw-block tw-text-gray-700 tw-text-sm tw-font-bold tw-mb-2">
-                        Image
+    <form (ngSubmit)="onSubmit()" #formAdd="ngForm">
+        <div class="tw-grid tw-grid-cols-2 tw-gap-8">
+            <div class="">
+                <div class="tw-mb-4">
+                    <label class="tw-block :tw-text-white tw-text-gray-700 tw-text-sm tw-font-bold tw-mb-2">
+                        Project name <span class="!tw-text-red-500">*</span>
                     </label>
-                    <div class="tw-mb-3">
-                        <input [(ngModel)]="project.img" name="img"
-                            class="form-control tw-block tw-w-full tw-px-3 tw-py-1.5 tw-text-base tw-font-normal tw-text-gray-700 tw-bg-white tw-bg-clip-padding tw-border tw-border-solid tw-border-gray-300 tw-rounded tw-transition tw-ease-in-out tw-m-0 focus:tw-text-gray-700 focus:tw-bg-white focus:tw-border-blue-600 focus:tw-outline-none"
-                            type="text" id="img-project" />
+                    <input
+                        class=" tw-appearance-none tw-border tw-rounded tw-w-full tw-py-2 tw-px-3 tw-text-gray-700 tw-leading-tight focus:tw-outline-none focus:-outline"
+                        id="title-project" [(ngModel)]="project.name" name="name" type="text" #name="ngModel"
+                        required
+                        minlength="5"/>
+                        <div *ngIf="name.errors" class="alert">
+                            <div *ngIf="name.errors?.['required'] && (name.dirty || name.touched)" class="alert alert-danger">
+                                Name is required
+                            </div>
+                            <div *ngIf="name.errors?.['minlength'] && (name.dirty || name.touched)" class="alert alert-danger">
+                                Min length la 5
+                            </div>
+                        </div>
+                </div>
+                <div class="tw-grid tw-grid-cols-2 tw-gap-5">
+                    <div class="tw-m-full">
+                        <label class="tw-block tw-text-gray-700 tw-text-sm tw-font-bold tw-mb-2">
+                            Image avatar
+                        </label>
+                        <div class="tw-mb-3">
+                            <input [(ngModel)]="project.img" name="img" 
+                                class="form-control tw-block tw-w-full tw-px-3 tw-py-1.5 tw-text-base tw-font-normal tw-text-gray-700 tw-bg-white tw-bg-clip-padding tw-border tw-border-solid tw-border-gray-300 tw-rounded tw-transition tw-ease-in-out tw-m-0 focus:tw-text-gray-700 focus:tw-bg-white focus:tw-border-blue-600 focus:tw-outline-none"
+                                type="text" id="img-project" />
+                        </div>
+                    </div>
+                    <div class="tw-m-full tw-mb-6">
+                        <label class="tw-block tw-text-gray-700 tw-text-sm tw-font-bold tw-mb-2">
+                            Category Name
+                        </label>
+                        <select [(ngModel)]="project.cateProjectId" name="cateProjectId" (change)="changeCate($event)"
+                            class="tw-select tw-select-primary tw-w-full tw-py-1.5 tw-max-w-xs tw-min-h-0 tw-h-auto tw-rounded">
+                            <option  *ngFor="let item of categories" value={{item.id}}>{{item.name}}</option>
+                        </select>
                     </div>
                 </div>
-                <div class="tw-m-full tw-mb-6">
-                    <label class="tw-block tw-text-gray-700 tw-text-sm tw-font-bold tw-mb-2">
-                        Category Name
+                <div class="tw-mb-4">
+                    <label class="tw-block :tw-text-white tw-text-gray-700 tw-text-sm tw-font-bold tw-mb-2">
+                        Link demo
                     </label>
-                    <select
-                        class="selected-cate tw-form-select tw-appearance-none tw-block  tw-w-full  tw-px-3  py-[4px]  tw-text-base tw-font-normal tw-text-gray-700 tw-bg-white tw-bg-clip-padding tw-bg-no-repeat  tw-border tw-border-solid tw-border-gray-300 tw-rounded tw-transition tw-ease-in-out tw-m-0 focus:tw-text-gray-700 focus:tw-bg-white focus:tw-border-blue-600 focus:tw-outline-none"
-                        aria-label="Default select example">
-                        <option class="" value={item.id}>Abc</option>
-                    </select>
-                </div>
-            </div>
-            <div class="tw-grid tw-grid-cols-2 tw-gap-5">
-                <div class="tw-m-full tw-mb-4">
-                    <label class="tw-block tw-text-gray-700 tw-text-sm tw-font-bold tw-mb-2">
-                        Regular Price($)
-                    </label>
-                    <div class="tw-mb-3">
-                        <input [(ngModel)]="project.img" name="regularPrice"
-                            class=" tw-appearance-none tw-border tw-rounded tw-w-full tw-py-2 tw-px-3 tw-text-gray-700 tw-leading-tight focus:tw-outline-none focus:-outline"
-                            id="old-price-project" type="number" />
-                    </div>
-                </div>
-                <div class="tw-m-full">
-                    <label class="tw-block tw-text-gray-700 tw-text-sm tw-font-bold tw-mb-2">
-                        Sale Price($)
-                    </label>
-                    <div class="tw-mb-3">
-                        <input [(ngModel)]="project.link" name="salePrice"
-                            class=" tw-appearance-none tw-border tw-rounded tw-w-full tw-py-2 tw-px-3 tw-text-gray-700 tw-leading-tight focus:tw-outline-none focus:-outline"
-                            id="price-project" type="number" />
-                    </div>
-                </div>
-            </div>
-            <div class="tw-mb-4">
-                <label class="tw-block :tw-text-white tw-text-gray-700 tw-text-sm tw-font-bold tw-mb-2">
-                    Size
-                </label>
-                <input id="size" [(ngModel)]="project.tech" name="size"
+                    <input id="size" [(ngModel)]="project.link" name="link"
                     class="tw-appearance-none tw-border tw-rounded tw-w-full tw-py-2 tw-px-3 tw-text-gray-700 tw-leading-tight focus:tw-outline-none focus:-outline"
                     type="text" />
+                </div>
+                <div class="tw-m-full tw-mb-4">
+                    <label class="tw-block tw-text-gray-700 tw-text-sm tw-font-bold tw-mb-2">
+                        Technical <span class="!tw-text-red-500 tw-font-normal">* cách nhau bởi dấu phẩy ", "</span>
+                    </label>
+                    <div class="tw-mb-3">
+                        <textarea [(ngModel)]="project.tech" name="tech" class="tw-w-full tw-h-[80px] tw-border tw-rounded"
+                            id="desc-project"></textarea>
+                    </div>
+                </div>
             </div>
-            <div class="tw-mb-4">
-                <label class="tw-block :tw-text-white tw-text-gray-700 tw-text-sm tw-font-bold tw-mb-2">
-                    Description
-                </label>
-                <textarea [(ngModel)]="project.desc" name="desc" class="tw-w-full" id="desc-project"></textarea>
+            <div class="tw-text-center">
+                <img id="img-preview" class="tw-inline-block tw-w-[360px] tw-h-[360px] tw-object-cover"
+                   src={{project.img}} onerror="this.src='https://i.imgur.com/MV2djzI.png'" alt="" />
             </div>
-            <div class="tw-text-right">
-                <button
-                    class="btnAdd tw-bg-blue-500 hover:tw-bg-blue-700 !tw-text-white tw-font-bold tw-py-2 tw-px-4 tw-rounded focus:tw-outline-none focus:-outline">
-                    Submit
-                </button>
-            </div>
-        </form>
-        <div class="img">
-            <img id="img-preview" class="tw-w-full h-[420px] tw-object-cover" src="https://i.imgur.com/3XGhQ2Z.png" alt="" />
         </div>
-    </div>
+        <div class="tw-m-full">
+            <label class="tw-block tw-text-gray-700 tw-text-sm tw-font-bold tw-mb-2">
+                Tech sheet <span class="!tw-text-red-500">*</span>
+            </label>
+            <div class="tw-mb-3">
+                <textarea [(ngModel)]="project.techSheet" name="techSheet" class="tw-w-full tw-h-[80px] tw-border tw-rounded" id="desc-project"></textarea>
+            </div>
+        </div>
+        <div class="tw-mb-4">
+            <label class="tw-block :tw-text-white tw-text-gray-700 tw-text-sm tw-font-bold tw-mb-2">
+                Short description <span class="!tw-text-red-500">*</span>
+            </label>
+            <textarea [(ngModel)]="project.descShort" name="descShort" class="tw-w-full tw-h-[80px] tw-border tw-rounded" id="desc-project"></textarea>
+        </div>
+        <div class="tw-mb-4">
+            <label class="tw-block :tw-text-white tw-text-gray-700 tw-text-sm tw-font-bold tw-mb-2">
+                Description <span class="!tw-text-red-500">*</span>
+            </label>
+            <textarea [(ngModel)]="project.desc" name="desc" class="tw-w-full tw-h-[80px] tw-border tw-rounded" id="desc-project"></textarea>
+        </div>
+        <div class="tw-text-right">
+            <button
+                class="btnAdd tw-bg-blue-500 hover:tw-bg-blue-700 !tw-text-white tw-font-bold tw-py-2 tw-px-4 tw-rounded focus:tw-outline-none focus:-outline">
+                Submit
+            </button>
+        </div>
+    </form>
+
 </div>

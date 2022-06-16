@@ -1,7 +1,7 @@
 import { NzTableFilterFn, NzTableFilterList, NzTableSortFn, NzTableSortOrder } from 'ng-zorro-antd/table';
 
 export interface  IProject{
-    id?: number |string; 
+    id?: number | string; 
     name: string; 
     img: string; 
     link: string; 
@@ -10,7 +10,11 @@ export interface  IProject{
     techSheet: string;
     descShort: string;
     desc: string;
-    categoryId?: number;
+    cateProjectId?: number;
+    cateProject?:{
+        id: string | number,
+        name: string
+    }
 }
 export interface ColumnItem {
     name: string;

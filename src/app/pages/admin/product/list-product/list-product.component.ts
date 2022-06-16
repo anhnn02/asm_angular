@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ColumnItem, IProject } from 'src/app/models/Product';
-import { ProductService } from '../../../../services/product.service';
+import { ProjectService } from '../../../../services/product.service';
 import { splitArray } from '../../../../../utils/splitTechImg';
 
 @Component({
@@ -10,7 +10,7 @@ import { splitArray } from '../../../../../utils/splitTechImg';
 })
 export class ListProductComponent implements OnInit {
   projects!: IProject[];
-  constructor(private projectService: ProductService) {
+  constructor(private projectService: ProjectService) {
     this.getAllProduct()
   }
 
@@ -33,10 +33,10 @@ export class ListProductComponent implements OnInit {
     })
   }
 
-  onHandleRemove(id: string) {
-    const confirm = window.confirm("Are you sure you want to remove this product?")
+  onHandleRemove(id: string | number) {
+    const confirm = window.confirm("Are you sure you want to remove this project?")
     if (confirm) {
-      this.projectService.removeProduct(id).subscribe(() => {
+      this.projectService.removeProject(id).subscribe(() => {
         this.projects = this.projects.filter(item => item.id !== id);
       })
     }

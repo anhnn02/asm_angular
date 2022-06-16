@@ -1,0 +1,83 @@
+<div class="container tw-p-6 tw-pt-0 tw-mx-auto tw-grid">
+    <h2 class="tw-my-6 !tw-text-2xl tw-font-semibold tw-text-gray-700 :tw-text-gray-200">
+        Introduce your self
+    </h2>
+    <h4 class="!tw-text-xl tw-font-semibold !tw-text-green-500 :tw-text-gray-200">Form</h4>
+    <form (ngSubmit)="onSubmit()" #formAdd="ngForm">
+        <div class="tw-grid tw-grid-cols-2 tw-gap-8">
+            <div class="">
+                <div class="tw-mb-4">
+                    <label class="tw-block :tw-text-white tw-text-gray-700 tw-text-sm tw-font-bold tw-mb-2">
+                        Project name <span class="!tw-text-red-500">*</span>
+                    </label>
+                    <input
+                        class=" tw-appearance-none tw-border tw-rounded tw-w-full tw-py-2 tw-px-3 tw-text-gray-700 tw-leading-tight focus:tw-outline-none focus:-outline"
+                        id="title-project" type="text" [(ngModel)]="info.fullname" name="fullname" #fullname="ngModel"
+                        required minlength="5" />
+                    <div *ngIf="fullname.errors" class="alert">
+                        <div *ngIf="fullname.errors?.['required'] && (fullname.dirty || fullname.touched)"
+                            class="alert alert-danger">
+                            Fullname is required
+                        </div>
+                        <div *ngIf="fullname.errors?.['minlength'] && (fullname.dirty || fullname.touched)"
+                            class="alert alert-danger">
+                            Min length is 5
+                        </div>
+                    </div>
+                </div>
+                <div class="tw-m-full">
+                    <label class="tw-block tw-text-gray-700 tw-text-sm tw-font-bold tw-mb-2">
+                        Image avatar <span class="!tw-text-red-500">*</span>
+                    </label>
+                    <div class="tw-mb-3">
+                        <input [(ngModel)]="info.img" name="img" #img="ngModel" required
+                            class="form-control tw-block tw-w-full tw-px-3 tw-py-1.5 tw-text-base tw-font-normal tw-text-gray-700 tw-bg-white tw-bg-clip-padding tw-border tw-border-solid tw-border-gray-300 tw-rounded tw-transition tw-ease-in-out tw-m-0 focus:tw-text-gray-700 focus:tw-bg-white focus:tw-border-blue-600 focus:tw-outline-none"
+                            type="text" id="img-project" />
+                    </div>
+                    <div *ngIf="img.errors" class="alert">
+                        <div *ngIf="img.errors?.['required'] && (img.dirty || img.touched)" class="alert alert-danger">
+                            Img is required
+                        </div>
+                    </div>
+                </div>
+                <div class="tw-m-full">
+                    <label class="tw-block tw-text-gray-700 tw-text-sm tw-font-bold tw-mb-2">
+                        Education <span class="!tw-text-red-500">*</span>
+                    </label>
+                    <div class="tw-mb-3">
+                        <textarea [(ngModel)]="info.education" name="education" #education="ngModel" required
+                            class="tw-w-full tw-h-[80px] tw-border tw-rounded tw-p-3" id="desc-project"></textarea>
+                    </div>
+                    <div *ngIf="education.errors" class="alert">
+                        <div *ngIf="education.errors?.['required'] && (education.dirty || education.touched)"
+                            class="alert alert-danger">
+                            Education is required
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tw-text-center">
+                <img id="img-preview" class="tw-inline-block tw-w-[360px] tw-h-[360px] tw-object-cover tw-rounded"
+                    src={{info.img}} onerror="this.src='https://i.imgur.com/MV2djzI.png'" alt="" />
+            </div>
+        </div>
+
+        <div class="tw-mb-4">
+            <label class="tw-block :tw-text-white tw-text-gray-700 tw-text-sm tw-font-bold tw-mb-2">
+                Work experience <span class="!tw-text-red-500">*</span>
+            </label>
+            <textarea [(ngModel)]="info.workExperience" name="workExperience" #workExperience="ngModel" required
+                class="tw-w-full tw-h-[80px] tw-border tw-rounded tw-p-3" id="desc-project"></textarea>
+            <div *ngIf="workExperience.errors?.['required'] && (workExperience.dirty || workExperience.touched)" class="alert alert-danger">
+                Work experience is required
+            </div>
+        </div>
+        <div class="tw-text-right">
+            <button
+                class="btnAdd tw-bg-blue-500 hover:tw-bg-blue-700 !tw-text-white tw-font-bold tw-py-2 tw-px-4 tw-rounded focus:tw-outline-none focus:-outline">
+                Submit
+            </button>
+        </div>
+    </form>
+
+</div>

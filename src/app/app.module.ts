@@ -44,6 +44,19 @@ import { FormContactComponent } from './components/client/form-contact/form-cont
 import { ProjectDetailComponent } from './pages/client/project-detail/project-detail.component';
 import { ConceptDetailComponent } from './pages/client/concept-detail/concept-detail.component';
 import { CategoryComponent } from './pages/admin/category/category/category.component';
+import { ListConceptComponent } from './pages/admin/concept/list-concept/list-concept.component';
+import { AddConceptComponent } from './pages/admin/concept/add-concept/add-concept.component';
+import { AddCategoryComponent } from './pages/admin/category/add-category/add-category.component';
+import { NavComponent } from './components/client/nav/nav.component';
+import { BlogsComponent } from './components/client/blogs/blogs.component';
+import { BlogDetailComponent } from './pages/client/blog-detail/blog-detail.component';
+import { ListBlogComponent } from './pages/admin/blog/list-blog/list-blog.component';
+import { AddBlogComponent } from './pages/admin/blog/add-blog/add-blog.component';
+import { AddCateBlogComponent } from './pages/admin/cateBlog/add-cate-blog/add-cate-blog.component';
+import { ListCateBlogComponent } from './pages/admin/cateBlog/list-cate-blog/list-cate-blog.component';
+import { RelatedBlogComponent } from './components/client/related-blog/related-blog.component';
+import { RelatedProjectComponent } from './components/client/related-project/related-project.component';
+import { IntroComponent } from './pages/admin/intro/intro.component';
 
 registerLocaleData(en);
 
@@ -80,6 +93,19 @@ registerLocaleData(en);
     ProjectDetailComponent,
     ConceptDetailComponent,
     CategoryComponent,
+    ListConceptComponent,
+    AddConceptComponent,
+    AddCategoryComponent,
+    NavComponent,
+    BlogsComponent,
+    BlogDetailComponent,
+    ListBlogComponent,
+    AddBlogComponent,
+    AddCateBlogComponent,
+    ListCateBlogComponent,
+    RelatedBlogComponent,
+    RelatedProjectComponent,
+    IntroComponent,
   ],
   imports: [
     BrowserModule,

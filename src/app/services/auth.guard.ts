@@ -6,14 +6,14 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthGuard implements CanActivate {
-  API_URL: string = 'http://localhost:3001/api/';
+  API_URL: string = 'http://localhost:3001/login';
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     if(localStorage.getItem('user')) {
       return true
     }
-    return false;
+    return false
   }
   
 }

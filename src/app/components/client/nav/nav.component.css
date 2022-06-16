@@ -1,0 +1,13 @@
+.nav-main {
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(61, 182, 209, 0.136);
+    backdrop-filter: blur(15px);
+}
+.nav-main a{
+    background: transparent;
+}
+.nav-main a:hover{
+    background: rgba(7, 19, 22, 0.237);
+}

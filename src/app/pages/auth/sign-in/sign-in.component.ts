@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -9,12 +10,20 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class SignInComponent implements OnInit {
   validateForm!: FormGroup;
-  constructor(private fb: FormBuilder, private authService: AuthService) {  }
+  error!: string;
+  constructor(
+    private fb: FormBuilder, 
+    private authService: AuthService,
+    private router: Router
+    ) { 
+
+     }
+
 
   ngOnInit(): void {
     this.validateForm = this.fb.group({
       password: [null, [Validators.required]],
-      email: [null, [Validators.required]],
+      email: [null, [Validators.email, Validators.required]],
     });
   }
 
@@ -22,8 +31,11 @@ export class SignInComponent implements OnInit {
     if (this.validateForm.valid) {
       this.authService.login(this.validateForm.value).subscribe((data)=>{
         localStorage.setItem('user', JSON.stringify(data));
+        setTimeout(()=>{
+          this.router.navigateByUrl("/admin")
+        },1000)
       }, error =>{
-        console.log("Error",error.error);
+        this.error = error.error
       })
     } else {
       Object.values(this.validateForm.controls).forEach(control => {
